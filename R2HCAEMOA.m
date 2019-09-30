@@ -29,7 +29,7 @@ function R2HCAEMOA(Global)
     fmin   = min(PopObj,[],1);
     PopObj  = (PopObj-repmat(fmin,size(PopObj,1),1))./repmat(fmax-fmin,size(PopObj,1),1);
     PopObj = [PopObj;zeros(1,Global.M)];
-    tensor = InitializeUtilityTensor(Global,PopObj,W,r_initial,num_vec);
+    tensor = InitializeUtilityTensor(Global,PopObj,W,r,num_vec);
     worst = Global.N+1;  
     
     %% Optimization
